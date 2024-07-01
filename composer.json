@@ -10,8 +10,14 @@
       "email": "Prometee@users.noreply.github.com"
     }
   ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/support-gingerminds/PayumMonetico"
+    }
+  ],
   "require": {
-    "ekyna/payum-monetico": "^1.5",
+    "ekyna/payum-monetico": "dev-master",
     "sylius/sylius": "^1.5"
   },
   "require-dev": {

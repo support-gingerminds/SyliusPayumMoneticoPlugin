@@ -73,6 +73,11 @@ final class NotifyController
         }
 
         $payment = $this->processPayments($payments);
+
+        if ($request->request->has('modepaiement')) {
+            $payment->setPaymentResponseType($request->request->get('modepaiement'));
+        }
+
         if (null === $payment) {
             throw new NotFoundHttpException(
                 sprintf(
