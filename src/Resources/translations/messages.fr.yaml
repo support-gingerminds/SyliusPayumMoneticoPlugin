@@ -14,6 +14,8 @@ flux_se:
         help: max 20 charactères
       test_email:
         label: Email de test
+      tpe_type:
+        label: Type de TPE
     mode:
       production: Production
       test: Test
