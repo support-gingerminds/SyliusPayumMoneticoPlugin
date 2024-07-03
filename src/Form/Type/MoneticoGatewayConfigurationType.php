@@ -72,6 +72,15 @@ final class MoneticoGatewayConfigurationType extends AbstractType
                 'label' => 'flux_se.sylius_payum_monetico.fields.test_email.label',
                 'required' => false
             ])
+            ->add('tpe_type', ChoiceType::class, [
+                'label' => 'flux_se.sylius_payum_monetico.fields.tpe_type.label',
+                'required' => true,
+                'choices' => [
+                    'flux_se.sylius_payum_monetico.type.unique' => 1,
+                    'flux_se.sylius_payum_monetico.type.3x' => 3,
+                    'flux_se.sylius_payum_monetico.type.4x' => 4
+                ]
+            ])
         ;
     }
 }

@@ -17,3 +17,7 @@ flux_se:
     mode:
       production: Production
       test: Test
+    type:
+      unique: Montant unique
+      3x: Paiement 3x
+      4x: Paiement 4x
