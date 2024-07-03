@@ -12,6 +12,8 @@ flux_se:
       company:
         label: Société
         help: max 20 charactères
+      test_email:
+        label: Email de test
     mode:
       production: Production
       test: Test

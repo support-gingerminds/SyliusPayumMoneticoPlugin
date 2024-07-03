@@ -7,6 +7,7 @@ namespace FluxSE\SyliusPayumMoneticoPlugin\Form\Type;
 use Ekyna\Component\Payum\Monetico\Api\Api;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints\Length;
@@ -66,6 +67,10 @@ final class MoneticoGatewayConfigurationType extends AbstractType
                         'max' => 20,
                     ]),
                 ],
+            ])
+            ->add('test_email', EmailType::class, [
+                'label' => 'flux_se.sylius_payum_monetico.fields.test_email.label',
+                'required' => false
             ])
         ;
     }
