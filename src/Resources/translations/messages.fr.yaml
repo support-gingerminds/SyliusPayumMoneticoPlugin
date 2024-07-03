@@ -16,6 +16,8 @@ flux_se:
         label: Email de test
       tpe_type:
         label: Type de TPE
+      debug:
+        label: Mode debug
     mode:
       production: Production
       test: Test

@@ -9,6 +9,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
@@ -79,6 +80,10 @@ final class MoneticoGatewayConfigurationType extends AbstractType
             ])
             ->add('test_email', EmailType::class, [
                 'label' => 'flux_se.sylius_payum_monetico.fields.test_email.label',
+                'required' => false
+            ])
+            ->add('debug', CheckboxType::class, [
+                'label' => 'flux_se.sylius_payum_monetico.fields.debug.label',
                 'required' => false
             ])
         ;
