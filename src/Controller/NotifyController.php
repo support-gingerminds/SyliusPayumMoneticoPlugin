@@ -75,7 +75,7 @@ final class NotifyController
         $payment = $this->processPayments($payments);
 
         if ($request->request->has('modepaiement')) {
-            $payment->setPaymentResponseType($request->request->get('modepaiement'));
+            $payment->setPaymentResponseType($payment->getMethod()->getCode());
         }
 
         if (null === $payment) {
