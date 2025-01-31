@@ -111,6 +111,7 @@ final class NotifyController
         foreach ($payments as $payment) {
             switch ($payment->getState()) {
                 case BasePaymentInterface::STATE_NEW:
+                case BasePaymentInterface::STATE_CART:
                     return $payment;
                 case BasePaymentInterface::STATE_CANCELLED:
                 case BasePaymentInterface::STATE_FAILED:
