@@ -123,6 +123,10 @@ final class NotifyController
 
                     if (null === $emptyPayment) {
                         $emptyPayment = $order->getLastPayment(BasePaymentInterface::STATE_CART);
+
+                        if (null !== $emptyPayment) {
+                            $emptyPayment->setState(BasePaymentInterface::STATE_NEW);
+                        }
                     }
 
                     Assert::notNull($emptyPayment, sprintf(
