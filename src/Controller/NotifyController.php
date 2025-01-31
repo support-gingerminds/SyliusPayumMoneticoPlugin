@@ -119,9 +119,14 @@ final class NotifyController
 
                     // Retrieve this new payment if it exists
                     $emptyPayment = $order->getLastPayment(BasePaymentInterface::STATE_NEW);
+
+                    if (null === $emptyPayment) {
+                        $emptyPayment = $order->getLastPayment(BasePaymentInterface::STATE_CART);
+                    }
+
                     Assert::notNull($emptyPayment, sprintf(
                         'No Payment state "%s" found into the order !',
-                        BasePaymentInterface::STATE_NEW
+                        BasePaymentInterface::STATE_NEW . ',' . BasePaymentInterface::STATE_CART
                     ));
 
                     // Add the previous details to allow `PaymentResponseAction` to update the values
