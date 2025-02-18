@@ -15,7 +15,7 @@ final class ReferenceProvider implements ReferenceProviderInterface
          */
         return sprintf(
             'SY%s',
-            time()
+            hrtime(true)
         );
     }
 }
