@@ -15,7 +15,7 @@ final class ReferenceProvider implements ReferenceProviderInterface
          */
         return sprintf(
             'SY%s',
-            $payment->getOrder()->getId().'-'.date('His')
+            $payment->getOrder()->getId().'H'.date('His')
         );
     }
 }
