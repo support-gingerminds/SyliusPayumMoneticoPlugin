@@ -74,10 +74,6 @@ final class NotifyController
 
         $payment = $this->processPayments($payments);
 
-        if ($request->request->has('modepaiement')) {
-            $payment->setPaymentResponseType($request->request->get('modepaiement'));
-        }
-
         if (null === $payment) {
             throw new NotFoundHttpException(
                 sprintf(
@@ -88,6 +84,10 @@ final class NotifyController
                     $reference
                 )
             );
+        }
+
+        if ($request->request->has('modepaiement')) {
+            $payment->setPaymentResponseType($request->request->get('modepaiement'));
         }
 
         // The Payum `Token` will be updated with the reference to the new Sylius `Payment`
