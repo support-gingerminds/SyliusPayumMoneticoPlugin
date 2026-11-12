@@ -74,6 +74,7 @@ final class MoneticoGatewayConfigurationType extends AbstractType
                 'required' => true,
                 'choices' => [
                     'flux_se.sylius_payum_monetico.type.unique' => 1,
+                    'flux_se.sylius_payum_monetico.type.2x' => 2,
                     'flux_se.sylius_payum_monetico.type.3x' => 3,
                     'flux_se.sylius_payum_monetico.type.4x' => 4
                 ]

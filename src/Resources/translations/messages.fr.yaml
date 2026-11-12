@@ -23,5 +23,6 @@ flux_se:
       test: Test
     type:
       unique: Montant unique
+      2x: Paiement 2x
       3x: Paiement 3x
       4x: Paiement 4x
